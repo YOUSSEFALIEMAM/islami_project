@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Home_Screen extends StatelessWidget {
-static const String routeName='home';
+class Sebha_Tab extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Container(
+      color: Colors.blue,
     );
   }
 }
