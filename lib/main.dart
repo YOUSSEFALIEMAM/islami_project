@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:islami_progect_git/home/home_screen.dart';
-
+import 'package:islami_progect_git/home/Home_screen.dart';
+import 'package:islami_progect_git/home/quran/suradetialsscreen.dart';
 void main(){
   runApp(Main_app());
 }
@@ -8,8 +8,12 @@ class MyThemedata{
   static const Color primarycolor= Color.fromARGB(255, 183, 147, 95);
   static const Color darkcolor=Color.fromARGB(255, 20, 26, 46);
   static final ThemeData ligththeme= ThemeData(
-    appBarTheme:AppBarTheme(color: Colors.transparent,elevation: 0,
-        titleTextStyle: TextStyle(color:Colors.black,fontSize: 30)) ,
+    appBarTheme:AppBarTheme(
+        centerTitle: true,
+        color: Colors.transparent,elevation: 0,
+        titleTextStyle: TextStyle(color:Colors.black,fontSize: 30),
+    iconTheme: IconThemeData(color: Colors.black),
+    ) ,
     scaffoldBackgroundColor: Colors.transparent,
     primaryColor: MyThemedata.primarycolor,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -32,8 +36,10 @@ class Main_app extends StatelessWidget {
       title: 'Isalmi',
       theme: MyThemedata.ligththeme,
       darkTheme: MyThemedata.darktheme,
-      routes: {
+      routes:
+      {
         Home_Screen.routeName:(buildcontext)=>Home_Screen(),
+        SuraDetialsScreen.routeName:(buuildcontext)=>SuraDetialsScreen(),
       },
       initialRoute: Home_Screen.routeName,
     );
